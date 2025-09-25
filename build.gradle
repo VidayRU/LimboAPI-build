@@ -69,3 +69,7 @@ String getCurrentShortRevision() {
 
   return outputStream.toString().trim()
 }
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ['-Xlint:-unchecked', '-Xlint:-deprecation']
+}
